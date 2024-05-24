@@ -1,24 +1,35 @@
-This Python script appears to be a web scraper that extracts content (text and images) from a given URL, analyzes the content, and writes the analysis results to a text file. Here's a brief breakdown of the functionality:
+# Web Content Analysis Script
 
-Libraries Used:
+## Overview
+This Python script is designed to extract content (text and images) from a given webpage and analyze it. The analysis includes counting the number of images and links, as well as categorizing image formats. Additionally, the script downloads images and saves them to a specified output folder.
 
-os: For operating system-related functionality.
-requests: For making HTTP requests to the specified URL.
-BeautifulSoup from bs4: For parsing HTML content.
-urlparse from urllib.parse: For parsing URLs.
-Functions:
+## Requirements
+- Python 3.x
+- Libraries: `os`, `BeautifulSoup`, `requests`, `urllib`
 
-analysis: Analyzes the extracted image URLs and link URLs, counts the occurrences of different image formats, and writes the analysis results to a text file.
-image_download: Downloads images from the extracted image URLs and saves them to the specified output folder.
-extract_content: Extracts text content, image URLs, and link URLs from the HTML content of a webpage using BeautifulSoup. Then, it calls the analysis function to perform analysis on the extracted data.
-write_to_txt: Writes the extracted content to a text file.
-main: The main function of the script. It initiates the process by sending an HTTP request to the specified URL, extracting content, and writing the extracted content to a text file.
-Execution:
+## How to Use
+1. Clone or download the script files to your local machine.
+2. Ensure you have Python installed.
+3. Install the required libraries using pip:
+4. Run the script using the command line or an integrated development environment (IDE) such as PyCharm or Visual Studio Code.
 
-The script defines a main function which is executed if the script is run directly.
-The main function sends an HTTP request to the URL specified (https://franchisesuppliernetwork.com), extracts content from the response, and writes it to a text file.
-Output:
+## Usage
 
-The output is saved in a folder named after the domain of the URL, under an 'output folder'. The extracted content is saved in a file named output_main.txt.
-Additionally, images are downloaded and saved in a subfolder named 'images' within the domain folder.
-Overall, the script is designed to scrape content from a webpage, analyze it, and save the results for further processing or analysis.
+python main.py
+
+## Script Functionality
+
+- **Content Extraction**: The script extracts text and image URLs from the provided webpage using BeautifulSoup.
+- **Analysis**: It analyzes the extracted content by counting the number of images and links, as well as categorizing image formats (PNG, JPG, JPEG).
+- **Image Download**: The script downloads images from the webpage and saves them to a specified output folder.
+- **Output**: The analysis results are saved in a text file named `analysis.txt`, and the extracted content is saved in a text file named `output_main.txt`.
+
+## Customization
+- You can customize the URL to analyze by modifying the `url` variable in the `main()` function.
+- Adjust the user-agent string in the `headers` variable if necessary.
+- Modify the output folder structure or file names as per your preference.
+
+## File Structure
+- `main.py`: Main Python script file.
+- `output folder/`: Directory where output files and images are saved.
+- `README.md`: Documentation file.
