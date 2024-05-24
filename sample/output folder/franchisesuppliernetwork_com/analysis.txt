@@ -1,0 +1,8 @@
+Domain: franchisesuppliernetwork.com
+
+1. Images count: 56
+      * png count: 33
+      * jpg count: 17
+      * jpeg count: 6
+
+2. Links count: 76
